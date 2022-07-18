@@ -35,7 +35,7 @@ export default function Profile() {
   async function getUserPublications() {
     try {
       const returnedPublications = await client
-        .query(getPublications, { id })
+        .query(getPublications, { id, limit: 10 })
         .toPromise();
 
       const publicationsData = returnedPublications.data.publications.items;
