@@ -13,10 +13,10 @@ export default function Home() {
       <div className="col-span-3">
         <div className="px-4 py-8">
           <h1 className="text-3xl font-bold leading-tight text-center">
-            Decentralize Social Media App - Lens protocol
+            Decentralized Social Network - Lens protocol
           </h1>
           <p className="text-center">
-            This is a decentralized social media app built on the Lens protocol.
+            This is a decentralized social network built on the Lens protocol.
           </p>
         </div>
       </div>
