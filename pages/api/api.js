@@ -2,10 +2,12 @@ import { createClient } from "urql";
 
 const API_URL = "https://api.lens.dev";
 
+// Setup the client to use the API_URL as the base URL
 export const client = createClient({
   url: API_URL,
 });
 
+// Get the recommended profiles
 export const getProfiles = `
 query RecommendedProfiles {
 	recommendedProfiles {
