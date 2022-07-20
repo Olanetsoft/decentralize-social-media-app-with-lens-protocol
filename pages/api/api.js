@@ -1,9 +1,9 @@
 import { createClient } from "urql";
 
-const APIURL = "https://api.lens.dev";
+const API_URL = "https://api.lens.dev";
 
 export const client = createClient({
-  url: APIURL,
+  url: API_URL,
 });
 
 export const getProfiles = `
