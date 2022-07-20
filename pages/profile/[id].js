@@ -11,13 +11,6 @@ export default function Profile() {
 
   const { id } = router.query;
 
-  useEffect(() => {
-    if (id) {
-      fetchProfile();
-      getUserPublications();
-    }
-  }, [id]);
-
   async function fetchProfile() {
     try {
       const returnedProfile = await client
@@ -32,7 +25,7 @@ export default function Profile() {
     }
   }
 
-  async function getUserPublications() {
+  async function getProfilePublications() {
     try {
       const returnedPublications = await client
         .query(getPublications, { id, limit: 10 })
@@ -47,6 +40,13 @@ export default function Profile() {
       console.log("error fetching publications...", err);
     }
   }
+
+  useEffect(() => {
+    if (id) {
+      fetchProfile();
+      getProfilePublications();
+    }
+  }, [id]);
 
   return (
     <div>
